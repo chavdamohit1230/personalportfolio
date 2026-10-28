@@ -27,7 +27,7 @@ function App() {
         <ProjectsSection projects={projects} />
         <ContactSection contacts={contact} />
       </main>
-      <Footer name={`${basic.firstName} ${basic.lastName}`} />
+      <Footer name={`${basic.firstName} ${basic.lastName}`} resumeUrl={basic.resume} />
       <ScrollToTop />
     </div>
   );

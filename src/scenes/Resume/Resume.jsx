@@ -11,7 +11,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-const resumeLink =ResumeMohit
+const resumeLink = '/images/Mohit_Chavda_Resume.pdf';
 const Resume = () => {
   const pdfWrapper = useRef(null);
   const [pdfPageWidth, setPdfPageWidth] = useState(null);

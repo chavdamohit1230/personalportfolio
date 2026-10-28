@@ -1,21 +1,29 @@
 import React from 'react';
 
-const Footer = ({ name }) => {
+const Footer = ({ name, resumeUrl }) => {
   return (
     <footer className="foot">
       <div className="footer-content-wrap">
         <div className="foot-brand">
           <span className="brand-logo-symbol">M</span>
           <span className="brand-name">{name || 'Mohit Chavda'}</span>
-          <span className="brand-tag">Flutter & Mobile Engineer</span>
+          <span className="brand-tag">Flutter Developer | Mobile App Developer</span>
         </div>
 
         <div className="foot-links">
-          <a href="#hero">Home</a>
+          <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#services">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
+          <a
+            href={resumeUrl || '/images/Mohit_Chavda_Resume.pdf'}
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Mohit_Chavda_Resume.pdf"
+          >
+            Resume
+          </a>
         </div>
 
         <div className="foot-bottom">

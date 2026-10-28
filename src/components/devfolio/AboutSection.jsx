@@ -8,40 +8,40 @@ const AboutSection = ({ about, basic }) => {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const stats = [
-    { number: '4+', label: 'Store Apps Deployed', icon: 'fa-solid fa-mobile-screen-button' },
-    { number: '1.5+', label: 'Years Experience', icon: 'fa-solid fa-briefcase' },
-    { number: '4.8★', label: 'Store Rating', icon: 'fa-solid fa-star' },
-    { number: '99.9%', label: 'Crash-Free Rate', icon: 'fa-solid fa-shield-halved' }
+    { number: '1,600+', label: 'Organic Installs (TaskMate)', icon: 'fa-solid fa-download' },
+    { number: '1.5 Yrs', label: 'Flutter Experience', icon: 'fa-solid fa-briefcase' },
+    { number: '4.8★', label: 'Play Store Rating', icon: 'fa-solid fa-star' },
+    { number: '4+', label: 'Production Store Apps', icon: 'fa-solid fa-mobile-screen-button' }
   ];
 
   const pillars = [
     {
       icon: 'fa-brands fa-flutter',
-      title: 'Cross-Platform Mastery',
-      desc: 'Architecting native-grade mobile apps for Android & iOS from a unified Flutter codebase.'
+      title: 'Android & iOS Production Apps',
+      desc: 'Building and deploying responsive, smooth 60fps mobile apps on Google Play Store and Apple App Store.'
     },
     {
       icon: 'fa-solid fa-cubes-stacked',
-      title: 'Clean Architecture & BLoC',
-      desc: 'Decoupled presentation, domain, and data layers built for testability and rapid scalability.'
+      title: 'BLoC, Riverpod & Clean Architecture',
+      desc: 'Maintainable, scalable codebases built with BLoC, Riverpod, Provider, GetX, MVVM, and Dependency Injection.'
     },
     {
       icon: 'fa-solid fa-bolt-lightning',
-      title: 'Firebase & Live Sync',
-      desc: 'Zero-latency Realtime DB, Firestore streams, authentication, and FCM push notifications.'
+      title: 'Real-Time Chat, Networking & Payments',
+      desc: 'Firebase Auth, Firestore, FCM push notifications, speed networking, payment gateways, and subscription billing.'
     },
     {
       icon: 'fa-solid fa-wand-magic-sparkles',
-      title: 'AI & Gemini API Integrations',
-      desc: 'Crafting intelligent mobile assistants, predictive task scheduling, and smart automation.'
+      title: 'Gemini AI & CI/CD Automation',
+      desc: 'AI-powered smart task suggestions using the Gemini API and automated CI/CD pipelines for store releases.'
     }
   ];
 
   const techCategories = [
     { name: 'All', items: about?.tech || [] },
-    { name: 'Mobile Core', items: ['Flutter', 'Dart', 'Android & iOS', 'Clean Architecture', 'REST APIs (Dio)'] },
-    { name: 'State & Design', items: ['Bloc / Provider', 'Repository Pattern', 'Offline Caching', 'GetIt / DI'] },
-    { name: 'Cloud & AI', items: ['Firebase Auth', 'Firestore', 'Realtime DB', 'Gemini AI API', 'Google Play Console', 'App Store Connect'] }
+    { name: 'Mobile & Languages', items: ['Flutter', 'Dart (Primary)', 'Android', 'iOS', 'Responsive UI', 'Animations', 'Java/Kotlin Basics'] },
+    { name: 'State & Architecture', items: ['BLoC', 'Riverpod', 'Provider', 'GetX', 'Clean Architecture', 'MVVM', 'Dependency Injection'] },
+    { name: 'Backend, DB & DevOps', items: ['REST APIs (Dio, Retrofit)', 'Firebase (Auth, Firestore, FCM, Crashlytics)', 'Hive & SQLite', 'Shared Preferences', 'In-App Purchases & Subscriptions', 'Payment Gateway Integration', 'Gemini API', 'CI/CD', 'Git & GitHub', 'Postman', 'Play Store & App Store Deployment'] }
   ];
 
   const displayedTech = techCategories.find(c => c.name === activeCategory)?.items || about?.tech || [];
@@ -107,15 +107,28 @@ const AboutSection = ({ about, basic }) => {
                     <i className="fa-solid fa-graduation-cap detail-icon"></i>
                     <div className="detail-meta">
                       <span className="detail-label">Education</span>
-                      <span className="detail-val">BCA — MKBU (CGPA 8.5)</span>
+                      <span className="detail-val">BCA — MKBU (2022–2025 | CGPA 8.15/10)</span>
                     </div>
                   </div>
 
                   <div className="detail-item">
                     <i className="fa-solid fa-briefcase detail-icon"></i>
                     <div className="detail-meta">
-                      <span className="detail-label">Experience</span>
-                      <span className="detail-val">{basic?.experience || '1.5+ Years'}</span>
+                      <span className="detail-label">Experience ({basic?.experience || '1.5 Years'})</span>
+                      <span className="detail-val">{basic?.company || 'Aequitas Infotech Pvt. Ltd'} ({basic?.period || 'May 2025 – Present'})</span>
+                    </div>
+                  </div>
+
+                  <div className="detail-item">
+                    <i className="fa-solid fa-phone detail-icon"></i>
+                    <div className="detail-meta">
+                      <span className="detail-label">Phone</span>
+                      <a
+                        href="tel:+919023022212"
+                        className="detail-val detail-link"
+                      >
+                        {basic?.phone || '+91 9023022212'}
+                      </a>
                     </div>
                   </div>
 

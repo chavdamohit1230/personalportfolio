@@ -85,6 +85,18 @@ const ContactSection = ({ contacts }) => {
                     <i className={copiedEmail ? 'fa-solid fa-check' : 'fa-regular fa-copy'}></i>
                     <span>{copiedEmail ? 'Copied!' : 'Copy'}</span>
                   </button>
+                ) : contact.isResume ? (
+                  <a
+                    href={contact.action}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download="Mohit_Chavda_Resume.pdf"
+                    className="contact-quick-btn"
+                    title="Download Resume PDF"
+                  >
+                    <i className="fa-solid fa-file-arrow-down"></i>
+                    <span>Download</span>
+                  </a>
                 ) : (
                   <a
                     href={contact.action}

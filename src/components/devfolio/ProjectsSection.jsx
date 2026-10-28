@@ -244,6 +244,19 @@ const ProjectDisplayBlock = ({ project, index, onOpenLightbox }) => {
               <i className="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           )}
+          {project.appStoreUrl && (
+            <a
+              href={project.appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-app-store"
+              title={`View ${project.title} on Apple App Store`}
+            >
+              <i className="fa-brands fa-apple"></i>
+              <span>Download on App Store</span>
+              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          )}
           <button
             className="btn-view-gallery"
             onClick={() => onOpenLightbox(project, 0)}

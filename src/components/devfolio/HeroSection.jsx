@@ -37,11 +37,11 @@ const HeroSection = ({ basic, socials }) => {
             <Typewriter
               options={{
                 strings: [
-                  'Flutter Mobile Specialist',
-                  'Android & iOS Architect',
-                  'Production Mobile Apps',
-                  'AI & Firebase Integrations',
-                  'BLoC & Clean Architecture'
+                  'Flutter Developer | Mobile App Developer',
+                  'Android & iOS Production Apps',
+                  'BLoC, Riverpod & Clean Architecture',
+                  'Firebase, REST APIs & CI/CD Pipelines',
+                  'Gemini AI API & In-App Subscriptions'
                 ],
                 autoStart: true,
                 loop: true,
@@ -53,7 +53,7 @@ const HeroSection = ({ basic, socials }) => {
         </div>
 
         <p className="hero-bio-pitch reveal-fade-up delay-300">
-          Engineering fluid, high-performing mobile applications from napkin sketch to Google Play Store & Apple App Store releases.
+          Flutter Developer with 1.5 years of experience building and deploying production-ready Android &amp; iOS apps on the Google Play Store and Apple App Store — including TaskMate (1,600+ installs, 4.8★ rating), Peers Global Unity, OnlyUs, and Ryde IQ.
         </p>
 
         <div className="socials reveal-fade-up delay-350">
