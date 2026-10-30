@@ -17,4 +17,4 @@ const root = createRoot(document.getElementById('root'));
 root.render(<Root />);
 
 reportWebVitals();
-serviceWorkerRegistration.register();
+serviceWorkerRegistration.unregister();
